@@ -233,7 +233,7 @@ outputs:
         - {{ pin_subpackage('ray-default', exact=True) }}
         - uvicorn
         - requests {{ requests }}
-        - starlette ==0.40.0
+        - starlette ==0.47.2
         - fastapi ==0.109.1
         - aiorwlock
         - fsspec {{ fsspec }}
