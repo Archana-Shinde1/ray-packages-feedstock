@@ -21,7 +21,7 @@ source:
     - patches/0012-Fixed-boringssl-issue.patch  #[ppc64le]
 
 build:
-  number: 2
+  number: 3
 
 # Need these up here for conda-smithy to handle them properly.
 requirements:
@@ -74,7 +74,7 @@ outputs:
         - packaging
         # pickle5 needs to be here, otherwise setup.py tries
         # to install it and it fails on conda-forge Windows CI
-        - {{ cdt('java-11-openjdk-devel') }}  # [ppc64le or s390x]
+#        - {{ cdt('java-11-openjdk-devel') }}  # [ppc64le or s390x]
         - openjdk {{ openjdk }}               # [x86_64]
       run:
         - python {{ python }}
