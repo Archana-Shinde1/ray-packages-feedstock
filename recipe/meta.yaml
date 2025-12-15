@@ -74,8 +74,8 @@ outputs:
         - packaging
         # pickle5 needs to be here, otherwise setup.py tries
         # to install it and it fails on conda-forge Windows CI
-#        - {{ cdt('java-11-openjdk-devel') }}  # [ppc64le or s390x]
-        - openjdk {{ openjdk }}               # [x86_64]
+        - {{ cdt('java-11-openjdk-devel') }}  # [s390x]
+        - openjdk {{ openjdk }}               # [x86_64 or ppc64le]
       run:
         - python {{ python }}
         - aiohttp >=3.7
